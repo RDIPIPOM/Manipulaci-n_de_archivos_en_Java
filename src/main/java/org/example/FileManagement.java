@@ -42,4 +42,14 @@ public class FileManagement {
             e.printStackTrace();
         }
     }
+
+    public String getAbsolutePath(){
+        try {
+            file = new File(this.pathname);
+            return file.getAbsolutePath();
+        }catch (SecurityException e){
+            e.printStackTrace();
+            return "";
+        }
+    }
 }
